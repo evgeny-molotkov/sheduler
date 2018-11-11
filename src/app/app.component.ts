@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TicketModel } from './models';
+import { MatDialog } from '@angular/material';
 import {
     AgreementService,
     CorrectService,
@@ -9,6 +10,7 @@ import {
     WaitService
  } from './services';
  import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+ import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +27,7 @@ export class AppComponent implements OnInit {
     doneList:      Array<TicketModel>;
 
     constructor(
+        public dialog: MatDialog,
         private agreementService: AgreementService,
         private correctService: CorrectService,
         private devService: DevService,
@@ -80,5 +83,20 @@ export class AppComponent implements OnInit {
                               event.previousIndex,
                               event.currentIndex);
         }
+    }
+
+    openTicket(ticket: TicketModel) {
+        const dialogRef = this.dialog.open(DialogComponent, {
+            width: '300px',
+            data: {
+                name: ticket.name,
+                number: ticket.number,
+                message: ticket.message,
+                status: ticket.status
+            }
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            // TODO: dialog closed
+        });
     }
 }

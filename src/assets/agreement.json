@@ -3,14 +3,12 @@
         "name": "Согласование 1",
         "number": "2345",
         "status": "new",
-        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis non excepturi repellat suscipit sapiente corrupti aliquid a saepe obcaecati ullam?",
-        "changedState": "false"
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis non excepturi repellat suscipit sapiente corrupti aliquid a saepe obcaecati ullam?"
     },
     {
         "name": "Согласование 2",
         "number": "42",
         "status": "new",
-        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis non excepturi rep",
-        "changedState": "false"
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis non excepturi rep"
     }
 ]

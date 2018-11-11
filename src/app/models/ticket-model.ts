@@ -3,5 +3,4 @@ export class TicketModel {
     public number: string;
     public status: string;
     public message: string;
-    public changedState: string;
 }

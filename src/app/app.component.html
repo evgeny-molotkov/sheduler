@@ -10,7 +10,7 @@
             (cdkDropListDropped)="drop($event)"
             class="column__item-container">
 
-            <div *ngFor="let ticket of agreementList" class="column__item item" cdkDrag>
+            <div *ngFor="let ticket of agreementList" class="column__item item" cdkDrag (click)="openTicket(ticket)">
                 <div class="item__name">
                     {{ ticket.name }}
                 </div>
@@ -38,7 +38,7 @@
             (cdkDropListDropped)="drop($event)"
             class="column__item-container">
 
-            <div *ngFor="let ticket of waitList" class="column__item item" cdkDrag>
+            <div *ngFor="let ticket of waitList" class="column__item item" cdkDrag (click)="openTicket(ticket)">
                 <div class="item__name">
                     {{ ticket.name }}
                 </div>
@@ -66,7 +66,7 @@
             (cdkDropListDropped)="drop($event)"
             class="column__item-container">
 
-            <div *ngFor="let ticket of devList" class="column__item item" cdkDrag>
+            <div *ngFor="let ticket of devList" class="column__item item" cdkDrag (click)="openTicket(ticket)">
                 <div class="item__name">
                     {{ ticket.name }}
                 </div>
@@ -94,7 +94,7 @@
             (cdkDropListDropped)="drop($event)"
             class="column__item-container">
 
-            <div *ngFor="let ticket of testList" class="column__item item" cdkDrag>
+            <div *ngFor="let ticket of testList" class="column__item item" cdkDrag (click)="openTicket(ticket)">
                 <div class="item__name">
                     {{ ticket.name }}
                 </div>
@@ -122,7 +122,7 @@
             (cdkDropListDropped)="drop($event)"
             class="column__item-container">
 
-            <div *ngFor="let ticket of correctList" class="column__item item" cdkDrag>
+            <div *ngFor="let ticket of correctList" class="column__item item" cdkDrag (click)="openTicket(ticket)">
                 <div class="item__name">
                     {{ ticket.name }}
                 </div>
@@ -149,7 +149,7 @@
             (cdkDropListDropped)="drop($event)"
             class="column__item-container">
 
-            <div *ngFor="let ticket of doneList" class="column__item item" cdkDrag>
+            <div *ngFor="let ticket of doneList" class="column__item item" cdkDrag (click)="openTicket(ticket)">
                 <div class="item__name">
                     {{ ticket.name }}
                 </div>

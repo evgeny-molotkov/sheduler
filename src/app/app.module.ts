@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 
@@ -14,14 +17,23 @@ import {
     WaitService
 } from './services';
 
+import { DialogComponent } from './dialog/dialog.component';
+
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        DialogComponent
+    ],
+    entryComponents: [
+        DialogComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
-        DragDropModule
+        DragDropModule,
+        MatDialogModule,
+        BrowserAnimationsModule,
+        MatButtonModule
     ],
     providers: [
         AgreementService,

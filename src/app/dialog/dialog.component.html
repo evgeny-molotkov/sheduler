@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{ ticket.name }}</h1>
+<div mat-dialog-content>
+    <p># {{ ticket.number }}</p>
+    <p>{{ ticket.status }}</p>
+    <p>{{ ticket.message }}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCloseClick()">Закрыть</button>
+</div>
